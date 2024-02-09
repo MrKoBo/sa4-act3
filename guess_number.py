@@ -11,7 +11,10 @@ while not correct and guess != 'q':
         print("Congratulations! You guessed the right number.")
         break
     else:
-        guess = input("Sorry, that is not right try again! ")
+        if guess > number:
+            guess = input("Sorry, your guess was too high, try again! ")
+        else:
+            guess = input("Sorry, your guess was too low, try again! ")
 else:
     
     print(f"Sorry, the correct answer was {number}")
